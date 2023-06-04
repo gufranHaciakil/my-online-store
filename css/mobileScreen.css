@@ -1,0 +1,125 @@
+.section1,
+.section2 {
+  width: 360px;
+  margin: 125px auto
+}
+
+section h1 {
+  font-size: 25px;
+}
+
+.cards {
+  margin-left: 20px;
+}
+
+.Parent-cards {
+  flex-wrap: wrap;
+  padding-left: -22px;
+}
+
+.img-title p {
+  font-size: 16px;
+}
+
+.Parent-cards img {
+  width: 220px;
+}
+
+.img-title button {
+  font-size: 11px;
+}
+
+.img-title span {
+  font-size: 13px;
+}
+
+.basariylaEklendi {
+  font-size: 15px;
+  left: 27%;
+}
+
+.img-title2 {
+  width: 270px;
+}
+
+.conttt>img {
+  width: 70px;
+}
+
+.conttt>p {
+  font-size: 13px;
+  width: 778px;
+  position: relative;
+  top: -93px;
+  left: 90px;
+}
+
+
+.kargoGunu {
+  position: relative;
+  top: -91px;
+  width: 618px !important;
+  height: 49px;
+  font-size: 8px;
+  left: 125px;
+
+}
+
+
+.others-item input {
+  position: relative;
+  left: 7px;
+  width: 30px;
+  height: 20px;
+  top: 2px;
+}
+
+
+.trashIcon {
+  margin-left: 12px;
+  font-size: 13px;
+}
+
+.others-item span {
+  font-size: 12px;
+}
+
+.others-item {
+  position: relative;
+  right: -185px;
+  margin-bottom: -112px;
+  top: -120px;
+}
+
+#sepetIcon {
+  display: none;
+}
+
+.mobScrSeptIcon {
+  display: block;
+  position: absolute;
+  top: 105px;
+  right: 25px;
+  cursor: pointer;
+}
+
+
+.mobleScrSepSayfa {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 400px;
+  right: 0;
+  background-color: rgb(255 255 255 / 90%);
+  transition: all 0.4s;
+}
+
+#mobScrCloseIcon {
+  cursor: pointer;
+}
+#body > section.mobleScrSepSayfa > div.siparisOzeti > span:nth-child(5),#kargosiz{
+  position: relative;
+  left: 199px;
+  top: -20px;
+}

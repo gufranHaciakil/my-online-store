@@ -7,34 +7,32 @@ const product = document.getElementById("product");
 const closeIconFunk = () => {
   const closeIcon = document.getElementById("closeIcon");
   closeIcon.addEventListener("click", (eo) => {
-    sepetSayfasi.style.left = "1360px";
+    sepetSayfasi.style.left = "1350px";
+    mobleScrSepSayfa.style.left = "400px";
   });
 };
-
 closeIconFunk();
 
-
 const updatePrise = () => {
-  const allProductInseppet=document.querySelectorAll(".img-title2")
-  let sonuc2=0
-  let sonuc=0
-  let kargo=20
-  allProductInseppet.forEach(item => {
-    const productFiati=Number(item.getElementsByClassName("fiat")[0].innerText.replace("TL",""))
-    const productValue=Number(item.getElementsByClassName("input")[0].value)
-    sonuc=sonuc+kargo+(productFiati*productValue)
-    sonuc2=sonuc2+(productFiati*productValue)
-
+  const allProductInseppet = document.querySelectorAll(".img-title2");
+  let sonuc2 = 0;
+  let sonuc = 0;
+  let kargo = 20;
+  allProductInseppet.forEach((item) => {
+    const productFiati = Number(
+      item.getElementsByClassName("fiat")[0].innerText.replace("TL", "")
+    );
+    const productValue = Number(item.getElementsByClassName("input")[0].value);
+    sonuc = sonuc + kargo + productFiati * productValue;
+    sonuc2 = sonuc2 + productFiati * productValue;
   });
 
-const toplam=document.getElementById("toplam")
-toplam.innerText=`${sonuc} TL`
+  const toplam = document.getElementById("toplam");
+  toplam.innerText = `${sonuc} TL`;
 
-const kargosiz=document.getElementById("kargosiz")
-kargosiz.innerText=`${sonuc2} TL`
-
-}
-
+  const kargosiz = document.getElementById("kargosiz");
+  kargosiz.innerText = `${sonuc2} TL`;
+};
 const body = document.getElementById("body");
 buttunClass.forEach((item) => {
   item.addEventListener("click", (eo) => {
@@ -61,61 +59,74 @@ buttunClass.forEach((item) => {
     let itemImg = item.parentElement.getElementsByTagName("img")[0].src;
     let itemFiat = item.parentElement.getElementsByTagName("span")[0].innerText;
 
-
-     { // Products InnerHtml
+    {
+      // Products InnerHtml
       product.innerHTML += `
-    <div class="img-title2">
-    <div class="conttt">
+<div class="img-title2">
+  <div class="conttt">
       <img src="${itemImg}" alt="" />
-      <p class="sepetProductName">${itemTitle}</p>
+      <div class="proNameTitle">
+        <p class="sepetProductName">${itemTitle}</p>
+        <div class="kargoGunu">2 gün içinde kargoda</div>
       </div>
-      <div class="kargoGunu">2 gün içinde kargoda</div>
-      <div class="others-item">
+  </div>
+  <div class="others-item">
         <input type="number" class="input" value="1" />
         <br />
         <span class="fiat">${itemFiat}</span>
         <div class="trashIcon" id="trashIconId"><i class="fa-solid fa-trash" id="trashICON"></i></div>
-      </div>
-    </div>`; 
-     }
+  </div>
+</div>`;
+    }
 
-    updatePrise()
+    updatePrise();
     closeIconFunk();
-
-
   });
 });
 
 const sepetIcon = document.getElementById("sepetIcon");
 sepetIcon.addEventListener("click", (eo) => {
-  sepetSayfasi.style.left = "806px";
+  sepetSayfasi.style.left = "805px";
 });
-
 sepetSayfasi.addEventListener("click", (eo) => {
   if (eo.target.classList.contains("fa-trash")) {
     const removeProduct = eo.target.parentElement.parentElement.parentElement;
     removeProduct.style.opacity = "0";
-    const sepetteProName =eo.target.parentElement.parentElement.parentElement.getElementsByClassName("sepetProductName")[0].innerText;
+    const sepetteProName =
+      eo.target.parentElement.parentElement.parentElement.getElementsByClassName(
+        "sepetProductName"
+      )[0].innerText;
     setTimeout(() => {
       removeProduct.remove();
-      updatePrise()
-
+      updatePrise();
     }, 300);
     const allProCards = document.querySelectorAll(".cards");
     allProCards.forEach((item) => {
-      const allCardsProName =item.getElementsByClassName("AllProductP")[0].innerText;
+      const allCardsProName =
+        item.getElementsByClassName("AllProductP")[0].innerText;
       if (allCardsProName == sepetteProName) {
-      const sepetBTN= item.getElementsByClassName("buttunClass")[0]
-      sepetBTN.removeAttribute("disabled")
-      sepetBTN.classList.remove("buttunAktive")
-      sepetBTN.innerText="sepete ekle"
-
+        const sepetBTN = item.getElementsByClassName("buttunClass")[0];
+        sepetBTN.removeAttribute("disabled");
+        sepetBTN.classList.remove("buttunAktive");
+        sepetBTN.innerText = "sepete ekle";
       }
     });
-
-  } 
-
+  }
 });
-sepetSayfasi.addEventListener("change",(eo) => {
-      updatePrise()
-})
+sepetSayfasi.addEventListener("change", (eo) => {
+  updatePrise();
+});
+
+const mobleScrSepSayfa = document.getElementsByClassName("mobleScrSepSayfa")[0];
+const mobScrSeptIcon = document.getElementsByClassName("mobScrSeptIcon")[0];
+const mobScrCloseIcon = document.getElementById("mobScrCloseIcon");
+const mobScrCloseFunc = () => {
+  mobScrCloseIcon.addEventListener("click", (eo) => {
+    mobleScrSepSayfa.style.left = "400px";
+  });
+};
+mobScrCloseFunc();
+
+mobScrSeptIcon.addEventListener("click", (eo) => {
+  mobleScrSepSayfa.style.left = 0;
+});

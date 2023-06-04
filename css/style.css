@@ -9,7 +9,8 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-section {
+.section1,
+.section2 {
   box-shadow: 0 0 30px 1px rgba(128, 128, 128, 0.603);
   margin: 140px auto 0px auto;
   width: 1300px;
@@ -106,8 +107,6 @@ div .fa-cart-arrow-down:hover {
   color: white;
   animation: upDown 2s forwards;
   transform: translateX(900px);
-
-
 }
 
 @keyframes upDown {
@@ -127,15 +126,15 @@ div .fa-cart-arrow-down:hover {
   }
 
 }
-
 button:disabled {
   opacity: 0.6;
 }
 
+/*   ##########  SEPPET SAYFASI  ##########   */
 #sepetSayfasi {
   position: fixed;
   background-color: #ffffffeb;
-  top: -140px;
+  top: 0px;
   left: 1360px;
   right: 0;
   bottom: 0;
@@ -144,24 +143,28 @@ button:disabled {
   overflow: scroll;
 }
 
-
-.img-title2{
-
+.img-title2 {
   display: flex;
+  justify-content: space-between;
   width: 518px;
   box-shadow: 0 0 10px -1px #afa5a5;
   border-radius: 9px;
   padding: 2px 22px;
   margin: 0 0 6px 16px;
   transition: all 0.3s;
+  height: 77px;
 
 }
-.conttt {
 
+.conttt {
   display: flex;
-  /* margin: -11px 8px; */
-  /* align-items: center; */
-  width: 300px; 
+  margin: -11px -10px;
+  align-items: center;
+  width: fit-content;
+}
+
+.proNameTitle {
+  margin-left: 10px;
 }
 
 .conttt>img {
@@ -169,33 +172,27 @@ button:disabled {
 }
 
 .conttt>p {
-
   font-size: 13px;
-  margin-top: 18px;
+  margin-bottom: 22px;
   margin-left: 17px;
   height: fit-content;
-
+  width: fit-content;
 }
 
 
 .kargoGunu {
-
   font-size: 11px;
   color: orange;
-  position: relative;
-  top: 35px;
-  right: 191px;
-  width: 109px;
-  height: fit-content;
-
+  margin-left: 5px;
 }
 
 .others-item {
   display: flex;
-  margin-left: -79px;
+  /* margin-left: -79px; */
   gap: 12px;
   align-items: center;
 }
+
 .others-item input {
   width: 40px;
   height: 30px;
@@ -204,14 +201,15 @@ button:disabled {
 
 }
 
-.trashIcon{
+.trashIcon {
   margin-left: 19px;
   font-size: 16px;
   transition: all 0.1s;
 }
+
 .trashIcon:hover {
-color: rgba(224, 32, 32, 0.815);
-cursor: pointer;
+  color: rgba(224, 32, 32, 0.815);
+  cursor: pointer;
 }
 
 
@@ -266,4 +264,12 @@ cursor: pointer;
   margin-top: 10px;
   font-size: 26px;
   color: rgb(1, 177, 1);
+}
+
+/* END */
+.mobScrSeptIcon{
+  display: none;
+}
+.mobleScrSepSayfa{
+  display: none;
 }

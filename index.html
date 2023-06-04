@@ -10,6 +10,7 @@
     <title>Online Store</title>
     <!--  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="/css/mobileScreen.css" media="(max-width:500px)">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap"
@@ -18,7 +19,7 @@
   </head>
   <body id="body">
     <div id="sepetIcon"><i class="fa-solid fa-cart-arrow-down"></i></div>
-    <section>
+    <section class="section1">
       <h1>Üst giyim Hoodie</h1>
       <div class="Parent-cards">
         <div class="cards">
@@ -86,13 +87,34 @@
       </div>
     </section>
 
-    <section id="sepetSayfasi">
+    <section id="sepetSayfasi" class="">
+
       <div class="close-title">
         <div id="closeIcon"><i class="fa-solid fa-xmark"></i></div>
         <p class="AllProductP">Seppetin <i class="fa-solid fa-arrow-down"></i></p>
       </div>
+      <div id="product">
+      </div>
+      <div class="siparisOzeti">
+        <h1>Spariş Özeti</h1>
+        <div>ürün toplamı</div>
+        <span id="kargosiz">00</span>
+        <div>kargo fiatı toplamı</div>
+        <span>19.99</span>
+        <hr />
+        <div id="toplam">0TL</div>
+      </div>
+    </section>
 
-      <div id="product"></div>
+    <div class="mobScrSeptIcon"><i class="fa-solid fa-basket-shopping"></i></div>
+    
+    <section class="mobleScrSepSayfa">
+      <div class="close-title">
+        <div id="mobScrCloseIcon"><i class="fa-solid fa-arrow-right"></i></div>
+        <p class="AllProductP">Seppetin <i class="fa-solid fa-arrow-down"></i></p>
+      </div>
+      <div id="product">
+      </div>
       <div class="siparisOzeti">
         <h1>Spariş Özeti</h1>
         <div>ürün toplamı</div>
