@@ -3,11 +3,10 @@ const basariylaEklendi = document.getElementById("basariylaEklendi");
 const sepetSayfasi = document.getElementById("sepetSayfasi");
 const product = document.getElementById("product");
 
-// closeIconFunk()
 const closeIconFunk = () => {
   const closeIcon = document.getElementById("closeIcon");
   closeIcon.addEventListener("click", (eo) => {
-    sepetSayfasi.style.left = "1350px";
+    sepetSayfasi.style.right = "-70rem";
     mobleScrSepSayfa.style.left = "400px";
   });
 };
@@ -25,6 +24,7 @@ const updatePrise = () => {
     const productValue = Number(item.getElementsByClassName("input")[0].value);
     sonuc = sonuc + kargo + productFiati * productValue;
     sonuc2 = sonuc2 + productFiati * productValue;
+    kargo = 0;
   });
 
   const toplam = document.getElementById("toplam");
@@ -33,12 +33,12 @@ const updatePrise = () => {
   const kargosiz = document.getElementById("kargosiz");
   kargosiz.innerText = `${sonuc2} TL`;
 };
+
 const body = document.getElementById("body");
 buttunClass.forEach((item) => {
   item.addEventListener("click", (eo) => {
     {
-      // from buy to done
-
+      // from buy to donemobScrSeptIcon
       item.classList.add("buttunAktive");
       item.setAttribute("disabled", "");
       item.innerHTML = `Sepette Eklendi  &#10004;`;
@@ -72,7 +72,6 @@ buttunClass.forEach((item) => {
   </div>
   <div class="others-item">
         <input type="number" class="input" value="1" />
-        <br />
         <span class="fiat">${itemFiat}</span>
         <div class="trashIcon" id="trashIconId"><i class="fa-solid fa-trash" id="trashICON"></i></div>
   </div>
@@ -86,7 +85,7 @@ buttunClass.forEach((item) => {
 
 const sepetIcon = document.getElementById("sepetIcon");
 sepetIcon.addEventListener("click", (eo) => {
-  sepetSayfasi.style.left = "805px";
+  sepetSayfasi.style.right = "-1rem";
 });
 sepetSayfasi.addEventListener("click", (eo) => {
   if (eo.target.classList.contains("fa-trash")) {
@@ -115,18 +114,4 @@ sepetSayfasi.addEventListener("click", (eo) => {
 });
 sepetSayfasi.addEventListener("change", (eo) => {
   updatePrise();
-});
-
-const mobleScrSepSayfa = document.getElementsByClassName("mobleScrSepSayfa")[0];
-const mobScrSeptIcon = document.getElementsByClassName("mobScrSeptIcon")[0];
-const mobScrCloseIcon = document.getElementById("mobScrCloseIcon");
-const mobScrCloseFunc = () => {
-  mobScrCloseIcon.addEventListener("click", (eo) => {
-    mobleScrSepSayfa.style.left = "400px";
-  });
-};
-mobScrCloseFunc();
-
-mobScrSeptIcon.addEventListener("click", (eo) => {
-  mobleScrSepSayfa.style.left = 0;
 });

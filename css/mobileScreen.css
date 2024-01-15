@@ -1,10 +1,13 @@
 .section1,
 .section2 {
   width: 360px;
-  margin: 125px auto
+  margin: 2rem auto;
 }
 
 section h1 {
+  font-size: 25px;
+}
+.h1 {
   font-size: 25px;
 }
 
@@ -37,43 +40,16 @@ section h1 {
   font-size: 15px;
   left: 27%;
 }
-
-.img-title2 {
-  width: 270px;
-}
-
-.conttt>img {
+.conttt > img {
   width: 70px;
 }
-
-.conttt>p {
-  font-size: 13px;
-  width: 778px;
-  position: relative;
-  top: -93px;
-  left: 90px;
+.sepetProductName {
+  width: 10rem !important;
 }
-
-
-.kargoGunu {
-  position: relative;
-  top: -91px;
-  width: 618px !important;
-  height: 49px;
-  font-size: 8px;
-  left: 125px;
-
-}
-
-
 .others-item input {
-  position: relative;
-  left: 7px;
   width: 30px;
   height: 20px;
-  top: 2px;
 }
-
 
 .trashIcon {
   margin-left: 12px;
@@ -85,41 +61,9 @@ section h1 {
 }
 
 .others-item {
-  position: relative;
-  right: -185px;
-  margin-bottom: -112px;
-  top: -120px;
+  flex-direction: column;
 }
 
-#sepetIcon {
-  display: none;
-}
-
-.mobScrSeptIcon {
-  display: block;
-  position: absolute;
-  top: 105px;
-  right: 25px;
-  cursor: pointer;
-}
-
-
-.mobleScrSepSayfa {
-  display: block;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 400px;
-  right: 0;
-  background-color: rgb(255 255 255 / 90%);
-  transition: all 0.4s;
-}
-
-#mobScrCloseIcon {
-  cursor: pointer;
-}
-#body > section.mobleScrSepSayfa > div.siparisOzeti > span:nth-child(5),#kargosiz{
-  position: relative;
-  left: 199px;
-  top: -20px;
+#sepetSayfasi {
+  width: 392px;
 }

@@ -4,18 +4,17 @@
   box-sizing: border-box;
 }
 
-
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
-
+.h1{
+  text-align: center;
+}
 .section1,
 .section2 {
-  box-shadow: 0 0 30px 1px rgba(128, 128, 128, 0.603);
-  margin: 140px auto 0px auto;
-  width: 1300px;
+  margin: 2rem auto;
+  width: 100%;
   border-radius: 7px;
-
 }
 
 section h1 {
@@ -36,15 +35,17 @@ img {
 img:hover {
   transform: scale(1.1);
   opacity: 1;
-
 }
 
 .Parent-cards {
   display: flex;
+  box-shadow: 0 0 30px 1px rgba(128, 128, 128, 0.603);
   justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
   gap: 35px;
   font-weight: 600;
-  margin: -44px 2px;
+  margin: auto;
   padding: 24px 2px 40px 2px;
 }
 
@@ -70,16 +71,14 @@ img:hover {
   margin-top: 130px !important;
 }
 
-div .fa-cart-arrow-down {
-  position: fixed;
-  left: 1270px;
-  top: 60px;
-  border-bottom: 4px solid;
+#sepetIcon {
+  position: relative;
+  top: 2rem;
   font-size: 25px;
-  text-align: center;
-  width: 50px;
+  text-align: end;
+  width: 100%;
+  padding-right: 2rem;
   border-radius: 7px;
-  margin: 0 auto;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -121,10 +120,7 @@ div .fa-cart-arrow-down:hover {
   100% {
     transform: translateY(100px);
     transform: translateX(900px);
-
-
   }
-
 }
 button:disabled {
   opacity: 0.6;
@@ -135,8 +131,7 @@ button:disabled {
   position: fixed;
   background-color: #ffffffeb;
   top: 0px;
-  left: 1360px;
-  right: 0;
+  right: -70rem;
   bottom: 0;
   width: 563px;
   transition: 0.4s;
@@ -146,49 +141,42 @@ button:disabled {
 .img-title2 {
   display: flex;
   justify-content: space-between;
-  width: 518px;
   box-shadow: 0 0 10px -1px #afa5a5;
   border-radius: 9px;
-  padding: 2px 22px;
+  padding: 5px 10px;
+  padding-right: 2rem;
   margin: 0 0 6px 16px;
   transition: all 0.3s;
-  height: 77px;
-
 }
 
 .conttt {
+  gap: 10px;
   display: flex;
-  margin: -11px -10px;
   align-items: center;
+  padding: 0 3px;
+}
+
+.kargoGunu {
   width: fit-content;
 }
 
-.proNameTitle {
-  margin-left: 10px;
-}
-
-.conttt>img {
+.conttt > img {
   width: 80px;
 }
 
-.conttt>p {
+.conttt p {
   font-size: 13px;
-  margin-bottom: 22px;
-  margin-left: 17px;
-  height: fit-content;
-  width: fit-content;
+  width: 12rem;
 }
-
 
 .kargoGunu {
   font-size: 11px;
   color: orange;
-  margin-left: 5px;
+  margin-top: 2px;
 }
 
 .others-item {
   display: flex;
-  /* margin-left: -79px; */
   gap: 12px;
   align-items: center;
 }
@@ -198,7 +186,6 @@ button:disabled {
   height: 30px;
   padding-left: 2px;
   font-size: 18px;
-
 }
 
 .trashIcon {
@@ -212,7 +199,6 @@ button:disabled {
   cursor: pointer;
 }
 
-
 .product {
   border-radius: 10px;
 }
@@ -223,7 +209,6 @@ button:disabled {
   font-size: 30px;
   margin: 10px 16px;
   padding: 0 49px 0 0;
-
 }
 
 .fa-arrow-down {
@@ -241,22 +226,20 @@ button:disabled {
 
 .siparisOzeti {
   margin: 95px 20px 50px;
-
 }
 
 .siparisOzeti h1 {
   margin: -16px -1px -55px;
-
 }
 
-#sepetSayfasi>div.siparisOzeti>span:nth-child(3),
-#sepetSayfasi>div.siparisOzeti>span:nth-child(5) {
+#sepetSayfasi > div.siparisOzeti > span:nth-child(3),
+#sepetSayfasi > div.siparisOzeti > span:nth-child(5) {
   position: relative;
   bottom: 20px;
   left: 164px;
 }
 
-.siparisOzeti>div {
+.siparisOzeti > div {
   margin-top: -17px;
 }
 
@@ -267,9 +250,9 @@ button:disabled {
 }
 
 /* END */
-.mobScrSeptIcon{
+.mobScrSeptIcon {
   display: none;
 }
-.mobleScrSepSayfa{
+.mobleScrSepSayfa {
   display: none;
 }
