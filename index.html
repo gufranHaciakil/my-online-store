@@ -172,23 +172,19 @@
     const body = document.getElementById("body");
     buttunClass.forEach((item) => {
       item.addEventListener("click", (eo) => {
-        {
-          // from buy to donemobScrSeptIcon
-          item.classList.add("buttunAktive");
-          item.setAttribute("disabled", "");
-          item.innerHTML = `Sepette Eklendi  &#10004;`;
-        }
+        // from buy to donemobScrSeptIcon
+        item.classList.add("buttunAktive");
+        item.setAttribute("disabled", "");
+        item.innerHTML = `Sepette Eklendi  &#10004;`;
 
-        {
-          // creat Basarili Element
-          const basariylaEklendi = document.createElement("div");
-          body.prepend(basariylaEklendi);
-          basariylaEklendi.innerHTML = "Başarıyla Eklendi &#10004;";
-          basariylaEklendi.classList.add("basariylaEklendi");
-          setTimeout(() => {
-            basariylaEklendi.remove();
-          }, 2000);
-        }
+        // creat Basarili Element
+        const basariylaEklendi = document.createElement("div");
+        body.prepend(basariylaEklendi);
+        basariylaEklendi.innerHTML = "Başarıyla Eklendi &#10004;";
+        basariylaEklendi.classList.add("basariylaEklendi");
+        setTimeout(() => {
+          basariylaEklendi.remove();
+        }, 2000);
 
         let itemTitle =
           item.parentElement.getElementsByTagName("p")[0].innerText;
@@ -196,9 +192,8 @@
         let itemFiat =
           item.parentElement.getElementsByTagName("span")[0].innerText;
 
-        {
-          // Products InnerHtml
-          product.innerHTML += `
+        // Products InnerHtml
+        product.innerHTML += `
 <div class="img-title2">
   <div class="conttt">
       <img src="${itemImg}" alt="" />
@@ -213,7 +208,6 @@
         <div class="trashIcon" id="trashIconId"><i class="fa-solid fa-trash" id="trashICON"></i></div>
   </div>
 </div>`;
-        }
 
         updatePrise();
         closeIconFunk();
